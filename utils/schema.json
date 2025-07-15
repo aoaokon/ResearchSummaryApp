@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "背景", "目的", "新規性", "方法", "結果", "考察", "懸念点", "結論", "今後の展望", "キーワード"
+  ],
+  "properties": {
+    "背景": { "type": "string" },
+    "目的": { "type": "string" },
+    "新規性": { "type": "string" },
+    "方法": { "type": "string" },
+    "結果": { "type": "string" },
+    "考察": { "type": "string" },
+    "懸念点": { "type": "string" },
+    "結論": { "type": "string" },
+    "今後の展望": { "type": "string" },
+    "キーワード": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

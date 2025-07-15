@@ -1,0 +1,27 @@
+ResearchSummaryApp/
+├── app/
+│   └── streamlit_ui.py
+├── utils/
+│   ├── arxiv_search.py
+│   ├── semantic_scholar_search.py
+│   ├── summarizer.py
+│   ├── pdf_text_extractor.py
+│   ├── pdf_downloader.py
+│   ├── schema.json
+│   ├── croma_maneger.py
+│   └── db_maneger.py
+├── data/ 
+│   ├── pdf/
+│   │    ├── arXiv_1999_Multilevel_blocking_Monte_Carl.pdf
+│   │    └── ・・・省略・・・
+│   ├── text/
+│   │    ├── arXiv_1999_Multilevel_blocking_Monte_Carl.txt
+│   │    └── ・・・省略・・・
+│   ├── json/
+│   │    ├── arXiv_1999_Multilevel_blocking_Monte_Carl.json
+│   │    └── ・・・省略・・・
+|   └── paper_db.sqlite
+├──.env
+├──.gitignore
+├──README.md
+└── requirements.txt

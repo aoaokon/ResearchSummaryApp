@@ -1,0 +1,20 @@
+# 環境設定
+.env
+
+# Pythonバイトコードキャッシュ
+__pycache__/
+*.py[cod]
+
+# エディタ・OS関連
+.vscode/
+.DS_Store
+Thumbs.db
+
+# データ・出力ファイル
+data/pdf/
+data/text/
+data/json/
+data/paper_db.sqlite
+
+# その他
+*.log
