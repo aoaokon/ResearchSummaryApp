@@ -13,7 +13,7 @@ Thumbs.db
 # データ・出力ファイル
 data/pdf/
 data/text/
-data/json/
+data/summaries/
 data/paper_db.sqlite
 
 # その他
