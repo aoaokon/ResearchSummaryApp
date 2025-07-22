@@ -8,3 +8,4 @@ pdfplumber
 PyPDF2
 sqlalchemy
 tqdm
+streamlit-aggrid

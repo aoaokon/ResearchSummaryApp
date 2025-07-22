@@ -138,10 +138,42 @@ def update_summary_to_db(paper_id, summary):
 def fetch_all_papers():
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
-    c.execute("SELECT * FROM papers ORDER BY searched_at DESC")
+    c.execute("""
+        SELECT id, title, authors, year, source, downloaded, summarized,
+               background, purpose, novelty, method, results, discussion,
+               concerns, conclusion, future_work, keywords
+        FROM papers
+    """)
     rows = c.fetchall()
-    columns = [desc[0] for desc in c.description]
     conn.close()
-    # dictのリストで返す
-    papers = [dict(zip(columns, row)) for row in rows]
+
+    # カラム名をつけて辞書のリストに変換
+    papers = []
+    for row in rows:
+        papers.append({
+            "id": row[0],
+            "title": row[1],
+            "authors": row[2],
+            "year": row[3],
+            "source": row[4],
+            "downloaded": row[5],
+            "summarized": row[6],
+            "background": row[7],
+            "purpose": row[8],
+            "novelty": row[9],
+            "method": row[10],
+            "results": row[11],
+            "discussion": row[12],
+            "concerns": row[13],
+            "conclusion": row[14],
+            "future_work": row[15],
+            "keywords": row[16],
+        })
     return papers
+
+def delete_paper(paper_id):
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    c.execute("DELETE FROM papers WHERE id = ?", (paper_id,))
+    conn.commit()
+    conn.close()

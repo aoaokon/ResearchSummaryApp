@@ -22,7 +22,8 @@ OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ### 4. アプリの起動
 streamlit run app/streamlit_ui.py
 
-###ディレクトリ構成
+### ディレクトリ構成
+```
 ResearchSummaryApp/
 ├── app/
 │   └── streamlit_ui.py
@@ -50,3 +51,4 @@ ResearchSummaryApp/
 ├──.gitignore
 ├──README.md
 └── requirements.txt
+```
